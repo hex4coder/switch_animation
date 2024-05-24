@@ -9,9 +9,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Home Screen"),
+        centerTitle: true,
       ),
-      body: const Center(
-        child: SwitchAnimationWidget(),
+      body: Center(
+        child: SwitchAnimationWidget(
+          width: 80,
+          onChanged: (bool a) {
+            print(a);
+          },
+        ),
       ),
     );
   }
